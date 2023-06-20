@@ -21,8 +21,6 @@ module.exports = {
         "space-before-blocks":"warn",
         "function-paren-newline":"warn",
         "arrow-spacing":"warn",
-        "import/no-mutable-exports":"error",
-        "import/prefer-default-export":"warn",
         "object-curly-newline":"warn",
         "eqeqeq":"warn",
         "brace-style":"warn",
