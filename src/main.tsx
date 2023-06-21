@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import CssBaseline from "@mui/material/CssBaseline/CssBaseline";
 import {
   createBrowserRouter,
   RouterProvider
@@ -30,7 +31,8 @@ const router = createBrowserRouter([
 // eslint-disable-next-line function-paren-newline
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+      <CssBaseline/>
+      <RouterProvider router={router} />
     </React.StrictMode>
 // eslint-disable-next-line function-paren-newline
 );
