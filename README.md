@@ -19,12 +19,10 @@ front-end:
 - [Typescript](https://www.typescriptlang.org/docs/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 - [React router dom](https://reactrouter.com/en/main)
-- [Sass](https://sass-lang.com/documentation/)
 - [Eslint](https://eslint.org/docs/latest/use/getting-started)
 
 
-Guia de estilos: [Airbnb](https://github.com/airbnb/javascript)
-Metodologias **CSS** utilizadas: [BEM](https://getbem.com/introduction/), [SMACSS](http://smacss.com/book/), [OOCSS](http://oocss.org/)
+Guia de estilos: [Airbnb](https://github.com/airbnb/javascript) 
 Commits semânticos: [AngularJS](https://karma-runner.github.io/3.0/dev/git-commit-msg.html)
 ### 3. Como rodar
 
