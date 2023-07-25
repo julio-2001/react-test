@@ -7,7 +7,8 @@ const Api = Axios.create({
 interface GetDataOptions {
     path?: "character" | "location" | "episode";
     filters?: string;
-    page?:string | number
+    page?:string | number;
+    id?:string 
 }
 
 type Status = "ALIVE" | "DEAD" | "UNKNOWN";
@@ -69,23 +70,32 @@ export interface Episodes {
  * @param filters - Parametro string para o filtro selecionado.
  * O valor padrão e "**vazio**"
  * 
- * @param page - Paramentro para indicar a pagina atual
+ * @param page - Paramentro para indicar a pagina atual, Valor padrão é "**vazio**"
+ * 
+ * @param id - indica que ID de um personagem especifico deseja, Valor padrão é "**vazio**""
+ * **OBS: Não surte efeito page e filter se for usado junto com ID**
  * 
  * @example
  * `MODO DE USO`
  * 
  * ```ts
  *useEffetc(() => {
- *     getDataApi({}) // Retornará todos os personagems do caminho "character"
+ *     getDataApi({page:1}) // Retornará personagems da pagina 1 do caminho "character"
  * },[])
  * 
  * useEffect(() => {
- *      getDataApi({filters:"78"}) // Retornará o personagem de id "78" do caminho "chracters"
+ *      getDataApi({id:"78"}) // Retornará o personagem de id "78" do caminho "chracters"
  * },[])
  * 
  * useEffect(() => {
- *      getDataApi({path:"location",filters:"7"}) // Retornará o episodeo "7" do caminho "location"
+ *      getDataApi({path:"episode",id:"7"}) // Retornará o episodeo "7" do caminho "episodeo"
  * },[])
+ * 
+ * 
+ * useEffect(() => {
+ *      getDataApi({page:2, filters:"&status=Alive"}) // retorna uma lista de personagems vivos da pagina 2
+ * },[])
+ * 
  * 
  * ```
  *`OBS`: você pode importar a tipagem dos dados que deseja retornar 
@@ -104,10 +114,11 @@ export interface Episodes {
 const getDataApi = async ({
     path = "character",
     filters = "",
-    page = ""
+    page = "",
+    id
 }: GetDataOptions) => {
     try {
-        const response = await Api.get(`/${path}/${filters}${page ?`${filters? "&":"?"}page=${page}`:""}`);
+        const response = await Api.get(`/${path}/${id? id:`?page=${page}${filters? filters:""}`}`);
         return response;
     } catch (error) {
         throw new Error(`Erro na requesição a API:${error}`);
