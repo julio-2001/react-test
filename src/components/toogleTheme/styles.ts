@@ -1,7 +1,7 @@
 import ToggleButton from "@mui/material/ToggleButton";
-import {styled} from "@mui/material";
+import styled from "@mui/material/styles/styled";
 
-const MuiToogleButton = styled(ToggleButton)(({theme}) => ({
+const StyledMuiToogleButton = styled(ToggleButton)(({theme}) => ({
     "position":"absolute",
     "border":`1px solid ${theme.palette.primary.main}`,
     "top":theme.spacing(8),
@@ -18,4 +18,4 @@ const MuiToogleButton = styled(ToggleButton)(({theme}) => ({
         },
     }
 }))
-export default MuiToogleButton 
+export default StyledMuiToogleButton 

@@ -1,4 +1,4 @@
-import MuiToogleButton from "./styles";
+import StyledMuiToogleButton from "./styles";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useAppThemeContext } from "../../contexts/ThemeContext";
 
@@ -7,13 +7,13 @@ const ToogleThemeButton = () => {
   const {ToogleName, themeNameState} = useAppThemeContext()
 
   return (
-    <MuiToogleButton
+    <StyledMuiToogleButton
       value={themeNameState}
       selected={themeNameState === "light"}
       onClick={ToogleName}
     >
       <LightModeIcon/>
-    </MuiToogleButton>
+    </StyledMuiToogleButton>
   )
 }
 export default ToogleThemeButton
