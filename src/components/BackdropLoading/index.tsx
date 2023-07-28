@@ -1,10 +1,11 @@
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 
+
 interface MuiBackdropLoadingProps{
     loading:boolean
 }
-const MuiBackdropLoading = ({loading}:MuiBackdropLoadingProps) => {
+const BackdropLoading = ({loading}:MuiBackdropLoadingProps) => {
     return (
         <Backdrop
             open={loading}
@@ -13,4 +14,4 @@ const MuiBackdropLoading = ({loading}:MuiBackdropLoadingProps) => {
         </Backdrop>
     )
 }
-export default MuiBackdropLoading
+export default BackdropLoading
