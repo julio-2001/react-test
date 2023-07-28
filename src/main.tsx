@@ -8,6 +8,7 @@ import Root from "./routes/root"
 import Home from "./pages/home/Home";
 import Detail from "./pages/details/Detail";
 import Page404 from "./pages/page404/Page404";
+import Favorites from "./pages/favorites/Favorite"
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         "path":"filter/:filter",
         "element":<Home/>
+      },
+      {
+        "path":"favorites/:ids",
+        "element":<Favorites/>
       },
     ]
   }
