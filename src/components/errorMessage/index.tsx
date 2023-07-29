@@ -6,13 +6,7 @@ interface ErrorMessageProps{
 }
 const ErrorMessage  = ({message}:ErrorMessageProps) => {
   return (
-    <StyledErrorBox 
-      display={"flex"}
-      justifyContent={"center"}
-      height={"100vh"}
-      alignItems={"center"}
-      padding={"50px"}
-    >
+    <StyledErrorBox>
       <Typography>
         {message}
       </Typography>
