@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 
 const MuiButtonLoading = styled(Button)(({theme}) => ({
-    "background":theme.palette.secondary.main,
+    "background":theme.palette.button,
     "color":theme.palette.primary.main,
     "height":"56px",
     "fontSize":"24px",

@@ -26,7 +26,7 @@ const lightTheme = createTheme({
             "genderless":"#42520A",
             "unknown":"#825900",
         },
-        "button":"#194C13",
+        "button":"#54FF40",
         "favorites":"#166F80",
     },
     "breakpoints":{
