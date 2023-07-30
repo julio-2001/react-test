@@ -1,4 +1,9 @@
 import { createTheme } from "@mui/material";
+import ChakraPetchRegular from "../../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf";
+import ChakraPetchSemiBold from "../../assets/fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf";
+import ChakraPetchBold from "../../assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf";
+import RickAndMorty from "../../assets/fonts/Rick_and_morty/fonte--Rick-and-mofrty.ttf"
+
 
 const lightTheme = createTheme({
     "palette":{
@@ -44,20 +49,19 @@ const lightTheme = createTheme({
             "styleOverrides":`
                 @font-face {
                     font-family: "Chakra petch regular";
-                    src: url("/src/assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf");
+                    src: url(${ChakraPetchRegular});
                 }
                 @font-face {
                     font-family: "Chakra petch semiBold";
-                    src: url("/src/assets/fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf");
+                    src: url(${ChakraPetchSemiBold});
                 }
                 @font-face {
                     font-family: "Chakra petch bold";
-                    src: url("/src/assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf");
+                    src: url(${ChakraPetchBold});
                 }
-                
                 @font-face {
                     font-family: "Rick and morty";
-                    src: url("/src/assets/fonts/Rick_and_morty/fonte--Rick-and-mofrty.ttf");
+                    src: url(${RickAndMorty});
                 }
             `  
         }
