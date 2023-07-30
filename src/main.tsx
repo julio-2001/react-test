@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
-  RouterProvider
+  RouterProvider,
+  createHashRouter
 } from "react-router-dom"
 import Root from "./routes/root"
 import Home from "./pages/home/Home";
@@ -10,7 +10,7 @@ import Detail from "./pages/details/Detail";
 import Page404 from "./pages/page404/Page404";
 import Favorites from "./pages/favorites/Favorite"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     "path":"/",
     "element":<Root/>,
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     "children":[
       {
         "path":"/",
-        "element":<Home/>
+        "element":<Home/>,
       },
       {
         "path":"detail/:id",
