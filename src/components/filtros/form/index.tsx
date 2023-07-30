@@ -9,8 +9,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 
-
-
 const Index = () => {
     const [name, setName] = useState<string>("")
     const [species, setEspecie] = useState<string>("")
@@ -22,7 +20,7 @@ const Index = () => {
     const buildQueryString = (params: Record<string, string | undefined>): string => {
         return Object.entries(params)
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          .filter(([key, value]) => value !== undefined && value !== "")
+          .filter(([_, value]) => value !== undefined && value !== "") 
           .map(([key, value]) => `&${key}=${encodeURIComponent(value as string)}`)
           .join("");
     }
